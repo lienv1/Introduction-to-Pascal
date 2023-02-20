@@ -1,19 +1,25 @@
-program SimpleFunction;
+program FunktionBeispiel;
 
-type
-text = string;
-
+//In diesem Bereich reservieren wir Variablen für das Programm
 var
-textHelloWord : text;
-result :string;
+faktorX : integer; //Integer steht für eine Zahl
+faktorY : integer;
+resultat : integer; //Das Ergebnis von faktorX und faktorY soll später in 'resultat' gepspeichert werden
 
-function greet(str:string):string;
+//In diesem Bereich schreiben wir eine Funktion 
+function einfacheFuntionZumMultiplizieren(hierKommtFaktorX:integer; hierKommtFaktorY:integer ): integer;
     begin
-    result := 'Hello ' +str + '!';
-    exit(result)
+    resultat := hierKommtFaktorX * hierKommtFaktorY;
+    exit(resultat) ;
     end;
+//Mit 'end;' wird die Funktion abgeschlossen. Diese Funktion können wir beliebig einsetzen.
 
+//Hier beginnt das eigentliche Programm
 begin
-    textHelloWord :=  greet('World');
-    writeln (textHelloWord);
+  writeln('Bitte eine Zahl für FaktorX eingeben');
+  readln(faktorX);
+  writeln('Bitte eine Zahl für FaktorY eingeben');
+  readln(faktorY);
+  writeln(faktorX,  ' multipliziert mit ', faktorY, ' ergibt:');
+  writeln(einfacheFuntionZumMultiplizieren(faktorX,faktorY));
 end.

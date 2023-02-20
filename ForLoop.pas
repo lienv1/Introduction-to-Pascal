@@ -1,5 +1,6 @@
-program ForLoop;
+program ForLoopProgram;
 
+//In diesem Bereich reservieren wir Variablen für das Programm
 var
 i, max: integer;
 

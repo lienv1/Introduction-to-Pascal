@@ -1,21 +1,16 @@
-{$R+}
-{$B+}
-program Hello;
+program IfElseProgram;
+
+//In diesem Bereich reservieren wir Variablen für das Programm
 var
-zeit : real;
-name_a:string;
+farbe:string;
 
 begin
-    writeln('Zeit angeben');
-    readln(zeit);
-    writeln('Name eingeben');
-    readln(name_a);
-    if (zeit < 10.30) then
-        writeln('Guten Morgen, ' + name_a)
-    else if (zeit<17.30) then
-        writeln('Guten Tag, ' + name_a)
+    writeln('Rot oder Blau? Entscheide dich. Achte auf die Gross- und Kleinschreibung.');
+    readln(farbe);
+    if farbe = 'Rot' then
+        writeln('Du hast dich für Rot entschieden')
+    else if farbe = 'Blau' then
+       writeln('Du hast dich für Blau entschieden')
     else
-    begin
-    writeln('Guten Abend, ' + name_a)
-    end
+        writeln(farbe, ' ist weder Rot noch Blau');
 end.
